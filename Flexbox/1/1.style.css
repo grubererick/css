@@ -1,12 +1,12 @@
-/*Flex Container => Parent*/
+/*-*-*-*-*-**-*-*--*-*-*-*-*-*-*-*-*-*-*Flex Container => Parent*-*-*-*-**-*--*-*-*--*-*-*-*/
 ul {
   background-color: rgb(156, 127, 89);
   padding: 20px;
   /* height: 300px; added for flex flow of column 3.2 */
   /*Flex Container Properties*/
   display: flex;
- /* display: inline-flex;*/
- /* justify-content: center;*/
+  /* display: inline-flex;*/
+  /* justify-content: center;*/
 
   /*----------1 Flex Direction--------------*/
 
@@ -50,9 +50,9 @@ ul {
   /* Column-reverse wrap */
   /* flex-flow: column-reverse wrap; */
 
-
   /* ---------------------4 Justify Content----------------- */
   /* Default direction is Row =>main axis is gona be Horizontal */
+  /* Direction => Column =>Main Axis => Vertical*/
 
   /* 4.1 */
   /* Flex Start (Default) */
@@ -79,6 +79,8 @@ ul {
   /* justify-content: space-evenly; */
 
   /* ---------------------5 Align items (X axis) ----------- */
+  /* Default Direction =>Row => Cross Axis => Vertical */
+  /* Direction => Column => Cross Axis => Horizontal */
 
   /* 5.1 */
   /* Stretch is the default */
@@ -86,10 +88,46 @@ ul {
   /* align-items: stretch; */
 
   /* 5.2 */
-  
+  /* align-items: flex-start; */
 
+  /* 5.3 */
+  /* Flex end */
+  /* align-items: flex-end; */
+
+  /* 5.4 */
+  /* Center */
+  /* align-itmes: center; */
+
+  /* 5.5 */
+  /* Baseline */
+  /* align-items: baseline; */
+
+  /*------------------6 Align Content--------------------*/
+
+  /* 6.1 */
+  /* Stretch (Default) */
+  /* align-content: stretch; */
+
+  /* 6.2 */
+  /* Flex start */
+  /* align-items: flex-start; */
+
+  /* 6.3 */
+  /* Flex end */
+  /* align.items: flex-end */
+
+  /* 6.4 */
+  /* Space between */
+  /* align-content: space-between; */
+
+  /* 6.5 */
+  /* Space around */
+  /* align-content: space-around */
+
+  /* 6.6 */
+  /* Space even */
+  /* align-content: space-evenly; */
 }
-/*Flex items => children*/
 li {
   display: inline-block;
   list-style: none;
@@ -99,5 +137,16 @@ li {
   margin: 20px;
   width: 100px;
   text-align: center;
- /* height: 100px;*/ /*align-items: stretch;*/
+  /* height: 100px;*/ /*align-items: stretch;*/
+  padding-top: 20px; /*to visualize align-items: baseline */
+  padding-bottom: 20px; /*to visualize align-items: baseline */
 }
+
+/*to visualize align-items: baseline */
+li:first-child {
+  padding: 5px;
+}
+
+/**-*-*--*-**-**-*-*-*-*-*-*-*-*-*-*-*-*Flex items => children*--*-*-*-*-*-*-*-*-*-*-*-*-*-*/
+/* -----------------1. Order ------------------------ */
+
