@@ -446,7 +446,220 @@ section#services {
   color: white;
 }
 
+/* Skills */
+section#skills {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+
+  padding: calc(1rem + 2vw);
+  background-color: var(--secondary-color);
+}
+
+.skills__coding,
+.skills__tools {
+  padding: calc(1rem + 2vw);
+  text-transform: uppercase;
+
+  flex-basis: 41rem;
+  flex-grow: 1;
+}
+
+.skills__coding--title,
+.skills__tools--title {
+  font-size: 3rem;
+  text-transform: uppercase;
+  margin-bottom: 2rem;
+}
+
+.skills__coding h4,
+.skills__tools h4 {
+  font-size: 2rem;
+  color: white;
+}
+
+.skills__coding--progress,
+.skills__tools--progress {
+  position: relative;
+  display: block;
+  padding: 0.5rem;
+  border-radius: 3rem;
+  background-color: var(--primary-color);
+
+  width: 100%;
+  margin-bottom: 2rem;
+}
+
+.skills__coding--progress span,
+.skills__tools--progress span {
+  position: relative;
+  display: inline-block;
+  vertical-align: middle;
+  height: 2rem;
+  border-radius: 3rem 0 0 3rem;
+  background-color: var(--secondary-color-light);
+  /* width: 4rem; */
+}
+
+.skills__coding--progress__1 {
+  animation: design-1 4s infinite cubic-bezier(1, 0, 0, 1);
+}
+
+@keyframes design-1 {
+  0% {
+    width: 0;
+  }
+
+  100% {
+    width: 85%;
+  }
+}
+
+.skills__coding--progress__2 {
+  animation: design-2 4s infinite cubic-bezier(1, 0, 0, 1);
+}
+
+@keyframes design-2 {
+  0% {
+    width: 0;
+  }
+
+  100% {
+    width: 80%;
+  }
+}
+
+.skills__coding--progress__3 {
+  animation: design-3 4s infinite cubic-bezier(1, 0, 0, 1);
+}
+
+@keyframes design-3 {
+  0% {
+    width: 0;
+  }
+
+  100% {
+    width: 65%;
+  }
+}
+
+.skills__coding--progress__4 {
+  animation: design-4 4s infinite cubic-bezier(1, 0, 0, 1);
+}
+
+@keyframes design-4 {
+  0% {
+    width: 0;
+  }
+
+  100% {
+    width: 50%;
+  }
+}
+
+.skills__tools--progress__1 {
+  animation: tools-1 4s infinite cubic-bezier(1, 0, 0, 1);
+}
+
+@keyframes tools-1 {
+  0% {
+    width: 0;
+  }
+
+  100% {
+    width: 85%;
+  }
+}
+
+.skills__tools--progress__2 {
+  animation: tools-2 4s infinite cubic-bezier(1, 0, 0, 1);
+}
+
+@keyframes tools-2 {
+  0% {
+    width: 0;
+  }
+
+  100% {
+    width: 45%;
+  }
+}
+
+.skills__tools--progress__3 {
+  animation: tools-3 4s infinite cubic-bezier(1, 0, 0, 1);
+}
+
+@keyframes tools-3 {
+  0% {
+    width: 0;
+  }
+
+  100% {
+    width: 70%;
+  }
+}
+
+.skills__tools--progress__4 {
+  animation: tools-4 4s infinite cubic-bezier(1, 0, 0, 1);
+}
+
+@keyframes tools-4 {
+  0% {
+    width: 0;
+  }
+
+  100% {
+    width: 50%;
+  }
+}
+
+/* Contact */
+section#contact {
+  height: 100vh;
+  background-color: var(--tertiary-color);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.contact__form {
+  flex-basis: 80rem;
+  /* Nested Flex */
+  display: flex;
+  flex-direction: column;
+  background-color: var(--secondary-color);
+}
+
+.contact__form input,
+.contact__form textarea {
+  color: white;
+  font-size: 1.5rem;
+  letter-spacing: 0.2rem;
+  padding: 2rem;
+  background: transparent;
+  border: none;
+  border-bottom: var(--secondary-color-light) solid 0.1rem;
+}
+
+.contact__form textarea {
+  height: 30vh;
+}
+
+input[type='submit'] {
+  border: none;
+  cursor: pointer;
+}
+
 /* Media Queries */
+/* min-width: 1510px */
+@media screen and (min-width: 1510px) {
+  body {
+    width: 1510px;
+    margin: 0 auto;
+  }
+}
 /* max-width:900px */
 @media screen and (max-width: 900px) {
   /* Showcase */
@@ -454,6 +667,11 @@ section#services {
     background-position: 100%;
     align-items: flex-end;
   } */
+
+  /* Form */
+  .contact__form {
+    flex-basis: 40rem;
+  }
 }
 
 /* max-width:610px */
@@ -552,6 +770,8 @@ section#services {
   } */
 
   /* Services section */
+  /* Skills */
+
   section#services {
     padding: 6rem 3rem 2rem;
   }
@@ -561,11 +781,15 @@ section#services {
     margin: 0 0 calc(1rem + 2vw);
   }
 
-  .services--title {
+  .services--title,
+  .skills__coding--title,
+  .skills__tools--title {
     font-size: calc(1.2rem + 2vw);
   }
 
-  .services--description {
-    font-size: calc(.8rem + 1.5vw);
+  .services--description,
+  .skills__coding h4,
+  .skills__tools h4 {
+    font-size: calc(0.8rem + 1.5vw);
   }
 }
